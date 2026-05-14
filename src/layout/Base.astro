@@ -1,0 +1,38 @@
+---
+import siteConfig from "@/config/siteConfig.json"
+
+export interface Props {
+  title?: string,
+  meta_title?:string,
+  favicon?: string,
+	className?: string,
+	style?: string
+}
+
+const {
+  title = siteConfig.site.title, 
+  favicon = siteConfig.site.favicon_image, 
+	className,
+	style,
+  meta_title} = Astro.props
+
+	const pathname = Astro.url.pathname;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href={favicon ?? ''} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body 
+		style={style}
+		class={`bg-background min-h-screen flex flex-col scroll-smooth ${className}`}>
+		<main class="grow">
+      <slot/>
+		</main>
+		</div>
+	</body>
+</html>
