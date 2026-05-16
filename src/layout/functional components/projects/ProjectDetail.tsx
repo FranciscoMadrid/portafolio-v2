@@ -108,7 +108,7 @@ export default function ProjectDetail({className, title, content, tags, github, 
       {/* Singular Image View */}
       <AnimatePresence mode='wait'>
         {view && (
-          <motion.div className='fixed top-0 left-0 h-full w-full bg-black/60 z-250'
+          <motion.div className='fixed top-0 left-0 h-full w-full bg-black/60 z-[251]'
             onClick={handleViewClose}
             initial={{
               opacity: 0
