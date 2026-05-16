@@ -2,7 +2,7 @@
   "site": {
     "title": "FFMS DEV",
     "description": "Hope you like my personal site.",
-    "favicon_image": "",
+    "favicon_image": "/images/logo-favicon.png",
     "logo": ""
   },
   "nav": [
