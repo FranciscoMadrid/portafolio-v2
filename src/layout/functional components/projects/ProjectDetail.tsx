@@ -122,10 +122,10 @@ export default function ProjectDetail({className, title, content, tags, github, 
             <div className='relative w-full h-full p-2'>
               {/* Image View */}
               <div 
-                className='absolute flex flex-col w-[95%] h-[95%] md:w-[85%] md:h-[85%] top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2'
-                onClick={(e) => e.stopPropagation()}>
+                className='absolute flex flex-col w-[95%] h-[95%] md:w-[85%] md:h-[85%] top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2'>
                 <div className='w-full h-full flex justify-center items-center'>
                   <img
+                    onClick={(e) => e.stopPropagation()}
                     loading='lazy'
                     alt={`${selectedImage}`}
                     className='w-fit h-fit md:h-full object-center'
