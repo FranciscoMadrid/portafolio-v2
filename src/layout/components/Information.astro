@@ -1,0 +1,37 @@
+---
+import Image from "astro/components/Image.astro";
+import StaggerFadeText from "../animations/StaggerFadeText";
+---
+
+<section id="information" class="max-w-7xl mx-auto w-full min-h-screen h-full relative">
+  <div class="w-full h-full flex flex-col p-10 gap-10">
+    <!-- Title Banner -->
+    <div class="relative py-4 items-center flex flex-row justify-center">
+      <div class="p-2 z-10 text-5xl md:text-6xl lg:text-7xl font-bold bg-secondary-darker shadow-[10px_10px_0px_rgba(0,0,0,0.3)]">
+        <p class="text-white [text-shadow:6px_6px_0px_rgba(0,0,0,.3)]">HEY THERE!</p>
+      </div>
+    </div>
+    
+    <div class="flex flex-col md:flex-row gap-2 relative">
+      <Image
+        src={'/images/personal.png'}
+        width={350}
+        height={350}
+        alt={'personal.png'}
+      />
+      <!-- Intro -->
+      
+      <div class="w-full h-full shadow-[20px_15px_0px_rgba(0,0,0,0.3)]">
+        <div class="w-full h-full p-5 bg-white border-4">
+          <p class="font-bold text-2xl md:text-3xl lg:text-4xl tracking-wider">
+            I’m Francisco Madrid, a <span class="text-primary-darker">Full-Stack Developer</span> 
+            and <span class="text-secondary-darker">Data Analyst</span> dedicated to building scalable 
+            applications and weaving your business 
+            data into clear visual stories.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

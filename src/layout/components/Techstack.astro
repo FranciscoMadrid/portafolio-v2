@@ -1,0 +1,90 @@
+---
+import Image from "astro/components/Image.astro";
+import FloatingWrapper from "../animations/FloatingWrapper";
+import TechstackEntry from "../animations/TechstackEntry";
+import StackMarquee from "../functional components/StackMarquee";
+import techStackInfo from '@/config/techstackConfig.json'
+---
+<section id="techstack" class="min-h-screen py-20 max-w-7xl mx-auto flex flex-col">
+  <div class="flex flex-col md:flex-row items-center justify-between p-5 gap-2">
+    <FloatingWrapper delay={.25} client:load>
+      <Image
+        src={'/images/techstack/hand - side.png'}
+        width={250}
+        height={250}
+        alt={'hand.png'}
+      />
+    </FloatingWrapper>
+    <TechstackEntry client:load/>
+
+    <FloatingWrapper className="-z-10" client:load>
+      <Image
+        src={'/images/techstack/techstack-side.png'}
+        width={250}
+        height={250}
+        alt={'stack.png'}
+      />
+    </FloatingWrapper>
+  </div>
+  <!-- Desktop View -->
+  <div class="hidden md:flex flex-col gap-20 items-center py-20">
+    <StackMarquee client:only="react">
+      {techStackInfo.slice(0, 5).map((tech) => (
+        <div class="inline-flex mx-2 w-fit h-full gap-2 items-center shrink-0 whitespace-nowrap">
+          <Image
+            src={tech.image}
+            alt={tech.name}
+            loading={'lazy'}
+            width={50}
+            height={50}
+          />
+          <p class="font-bold text-xl md:text-2xl">{tech.name}</p>
+        </div>
+      ))}
+    </StackMarquee>
+    <StackMarquee direction="left" client:only="react">
+      {techStackInfo.slice(5, 10).map((tech) => (
+        <div class="inline-flex mx-2 w-fit h-full gap-2 items-center shrink-0 whitespace-nowrap">
+          <Image
+            loading={'lazy'}
+            src={tech.image}
+            alt={tech.name}
+            width={50}
+            height={50}
+          />
+          <p class="font-bold text-xl md:text-2xl">{tech.name}</p>
+        </div>
+      ))}
+    </StackMarquee>
+    <StackMarquee direction="right" client:only="react">
+      {techStackInfo.slice(10, 17).map((tech) => (
+        <div class="inline-flex mx-2 w-fit h-fit gap-2 items-center shrink-0 whitespace-nowrap">
+          <Image
+            loading={'lazy'}
+            src={tech.image}
+            alt={tech.name}
+            width={50}
+            height={50}
+            class={'w-10 h-10 md:w-15 md:h-15 object-center object-fill'}
+          />
+          <p class="font-bold text-xl md:text-2xl">{tech.name}</p>
+        </div>
+      ))}
+    </StackMarquee>
+  </div>
+  <!-- Mobile View -->
+  <div class="flex md:hidden flex-wrap gap-10 justify-center p-5 py-20 items-center">
+    {techStackInfo.map((tech) => (
+      <div class="flex flex-col items-center justify-center gap-2">
+        <Image
+          loading={'lazy'}
+          src={tech.image}
+          width={50}
+          height={50}
+          alt={`${tech.image}.png`}
+        />
+        <p class="font-semibold">{tech.name}</p>
+      </div>
+    ))}
+  </div>
+</section>

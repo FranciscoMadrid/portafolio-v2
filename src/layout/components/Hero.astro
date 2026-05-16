@@ -1,68 +1,104 @@
 ---
 import Image from "astro/components/Image.astro";
 import LogoEntry from '../animations/LogoEntry'
+import FloatingWrapper from '../animations/FloatingWrapper'
+import StaggerFadeText from "../animations/StaggerFadeText";
+import FadeInWrapper from "../animations/FadeInWrapper";
+import siteConfig from "@/config/siteConfig.json"
+import NavbarContainer from "./navbar/NavbarContainer.astro";
+
+
+const navLinks = siteConfig
 ---
-<section class='min-h-screen max-w-7xl mx-auto relative flex flex-col overflow-hidden'>
-  <div class="absolute w-[50vw] h-[50vh] top-1/2 items-center justify-center flex right-1/2 translate-x-1/2 -translate-y-1/2">
-    <LogoEntry
-      xDistance="-200px"
-      yDistance="100px"
-      client:load>
-      <Image 
-        width={180} 
-        height={150}
-        alt="leftside.png"
-        src={'/images/hero/Left Side.png'}
-      />
-    </LogoEntry>
-    <LogoEntry
-      xDistance="200px"
-      yDistance="-100px"
-      client:load>
-      <Image 
-        width={180} 
-        height={150}
-        alt="leftside.png"
-        src={'/images/hero/Right Side.png'}
-      />
-    </LogoEntry>
-  </div>
-  {/* Fullstack Dev Text */}
-  <div class=' absolute left-0 top-0 p-5'>
-    <div class='grid grid-cols-3 font-bold'>
-      <span class='text-7xl text-primary-darker col-span-full'>
-        Fullstack Dev
-      </span>
-      <span class='text-3xl text-primary-main col-span-2'>
-        Turning ideas,
-      </span>
-      <div class='flex flex-wrap items-center col-span-full gap-2'>
-        <span class='text-3xl text-primary-main'>
-          into
+<section id="start" class='h-full w-full'>
+  <div class="min-h-screen h-full max-w-7xl mx-auto relative flex flex-col overflow-hidden">
+    <div class="absolute scale-90 w-fit h-fit top-1/2 items-center justify-center flex right-1/2 translate-x-1/2 -translate-y-1/2">
+      <LogoEntry
+        xDistance="-10vw"
+        yDistance="10vh"
+        client:load>
+        <FloatingWrapper delay={.3} client:load>
+          <Image 
+            loading="eager"
+            width={180} 
+            height={150}
+            alt="leftside.png"
+            src={'/images/hero/Left Side.png'}
+          />
+        </FloatingWrapper>
+      </LogoEntry>
+      <LogoEntry
+        xDistance="10vw"
+        yDistance="-10vh"
+        client:load>
+        <FloatingWrapper delay={.7} reverse={true} client:load>
+          <Image 
+            loading="eager"
+            width={180} 
+            height={150}
+            alt="rightside.png"
+            src={'/images/hero/Right Side.png'}
+          />
+        </FloatingWrapper>
+      </LogoEntry>
+    </div>
+    {/* Fullstack Dev Text */}
+    <div class=' absolute left-0 top-0 flex flex-col w-full'>
+      <NavbarContainer/>
+      <div class='grid grid-cols-3 font-bold p-5'>
+        <span class='text-5xl md:text-6xl lg:text-7xl [text-shadow:2px_2px_0px_rgba(0,0,0,.3)] text-primary-darker col-span-full'>
+          Fullstack Dev
         </span>
-        <span class='text-6xl text-primary-dark row-span-2'>
-          TOOLS
-        </span>
+        <StaggerFadeText
+          client:load
+          delay={.3}
+          text="Turning ideas,"
+          className="[text-shadow:1px_1px_0px_rgba(0,0,0,.3)] text-xl md:text-2xl lg:text-3xl text-primary-main col-span-2"
+        />
+        <div class='flex flex-wrap items-center col-span-full gap-2'>
+          <StaggerFadeText
+            client:load
+            delay={.5}
+            text="into"
+            className="text-xl [text-shadow:1px_1px_0px_rgba(0,0,0,.3)] md:text-2xl lg:text-3xl text-primary-main"
+          />
+          <FadeInWrapper 
+            delay={0.7}
+            client:load>
+            <span class='text-4xl [text-shadow:4px_4px_0px_rgba(0,0,0,.3)]  md:text-5xl lg:text-6xl text-primary-dark row-span-2'>
+              TOOLS
+            </span>
+          </FadeInWrapper>
+        </div>
       </div>
     </div>
-  </div>
-  {/* Data Analyst Text */}
-  <div class='absolute right-0 bottom-0 p-5 '>
-    <div class='flex flex-col font-bold '>
-      <span class='text-3xl text-secondary-main'>
-        Crafting stories,
-      </span>
-      <div class='flex flex-wrap items-center gap-2'>
-        <span class='text-3xl text-secondary-main'>
-          for a new
-        </span>
-        <span class='text-6xl text-secondary-dark row-span-2'>
-          PERSPECTIVE
+    {/* Data Analyst Text */}
+    <div class='absolute right-0 bottom-0 p-5 '>
+      <div class='flex flex-col font-bold '>
+        <StaggerFadeText
+          client:load
+          className='[text-shadow:1px_1px_0px_rgba(0,0,0,.3)] text-xl md:text-2xl lg:text-3xl text-secondary-main'
+          text="Crafting stories,"
+        />
+        
+        <div class='flex flex-wrap items-center gap-2'>
+          <StaggerFadeText
+            client:load
+            className='[text-shadow:1px_1px_0px_rgba(0,0,0,.3)] text-xl md:text-2xl lg:text-3xl text-secondary-main'
+            text="for a new"
+          />
+          <FadeInWrapper
+            delay={0.8}
+            client:load>
+            <span class='[text-shadow:4px_4px_0px_rgba(0,0,0,.3)] text-4xl md:text-5xl lg:text-6xl text-secondary-dark row-span-2'>
+              PERSPECTIVE
+            </span>
+          </FadeInWrapper>
+        </div>
+        <span class='[text-shadow:1px_1px_0px_rgba(0,0,0,.3)] text-5xl md:text-6xl lg:text-7xl text-secondary-darker col-span-full'>
+          Data Analyst
         </span>
       </div>
-      <span class='text-7xl text-secondary-darker col-span-full'>
-        Data Analyst
-      </span>
     </div>
   </div>
 </section>

@@ -13,3 +13,7 @@
 
   --color-background: #E9E9E9
 }
+
+html {
+  scroll-behavior: smooth;
+}

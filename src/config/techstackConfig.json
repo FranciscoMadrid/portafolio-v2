@@ -1,0 +1,70 @@
+[
+  {
+    "name": "HTML",
+    "image": "/images/techstack/html.png"
+  },
+  {
+    "name": "Javascript",
+    "image": "/images/techstack/javascript.png"
+  },
+  {
+    "name": "CSS",
+    "image": "/images/techstack/css.png"
+  },
+  {
+    "name": "C++",
+    "image": "/images/techstack/c++ logo.png"
+  },
+  {
+    "name": "C#",
+    "image": "/images/techstack/Csharp_Logo.png"
+  },
+  {
+    "name": "GraphQL",
+    "image": "/images/techstack/GraphQL_Logo.svg.png"
+  },
+  {
+    "name": "MySQL",
+    "image": "/images/techstack/MySQL-Logo.wine.png"
+  },
+  {
+    "name": "Node JS",
+    "image": "/images/techstack/Node.js_logo.svg.png"
+  },
+  {
+    "name": "React",
+    "image": "/images/techstack/React-icon.svg.png"
+  },
+  {
+    "name": "Power Apps",
+    "image": "/images/techstack/Power-Apps-icon.png"
+  },
+  {
+    "name": "Tailwindcss",
+    "image": "/images/techstack/Tailwind_CSS_Logo.svg.png"
+  },
+  {
+    "name": "Astro",
+    "image": "/images/techstack/astro-icon.png"
+  },
+  {
+    "name": "Motion",
+    "image": "/images/techstack/framer-motion-logo-png_seeklogo-446185.png"
+  },
+  {
+    "name": "Github",
+    "image": "/images/techstack/github icon.png"
+  },
+  {
+    "name": "Power Automate",
+    "image": "/images/techstack/power-automate-logo-transp.png"
+  },
+  {
+    "name": "Python",
+    "image": "/images/techstack/python_logo_icon_168886.webp"
+  },
+  {
+    "name": "Typescript",
+    "image": "/images/techstack/typescript.png"
+  }
+]

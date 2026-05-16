@@ -1,8 +1,29 @@
 {
   "site": {
     "title": "FFMS DEV",
-    "description": "",
+    "description": "Hope you like my personal site.",
     "favicon_image": "",
     "logo": ""
-  }
+  },
+  "nav": [
+    { "section": "start",
+      "title": "Home"
+    },
+    {
+      "section": "information",
+      "title": "About me"
+    },
+    {
+      "section": "techstack",
+      "title": "Skills"
+    },
+    { 
+      "section": "projects",
+      "title":"Projects"
+    },
+    { 
+      "section": "contact",
+      "title": "Contact"
+    }
+  ]
 }

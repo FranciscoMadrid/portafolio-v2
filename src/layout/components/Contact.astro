@@ -1,0 +1,130 @@
+---
+import Image from "astro/components/Image.astro";
+import StaggerFadeText from "../animations/StaggerFadeText";
+import FadeInWrapper from "../animations/FadeInWrapper";
+import type { delay } from "motion/react";
+
+
+---
+
+<section
+  class="w-full min-h-screen bg-background"
+  id="contact">
+  <div class="w-full min-h-screen max-w-7xl mx-auto flex flex-col items-center justify-center relative">
+    <div class="flex flex-col items-center gap-5">
+      <div class="text-5xl font-extrabold md:text-7xl lg:text-7xl flex flex-row shadow-[10px_10px_0px_rgba(0,0,0,0.3)] border-4">
+        <div class="bg-primary-main p-2 text-background [text-shadow:6px_6px_0px_rgba(0,0,0,.3)]">
+          <p>LET'S</p>
+        </div>
+        <div class="bg-secondary-main p-2 text-black [text-shadow:6px_6px_0px_rgba(0,0,0,.3)]">
+          <p>TALK!</p>
+        </div>
+      </div>
+      <FadeInWrapper client:load>
+        <p class="font-extrabold text-3xl md:text-4xl lg:text-5xl [text-shadow:2px_4px_0px_rgba(0,0,0,.3)]">ffms-a@outlook.com</p>
+      </FadeInWrapper>
+      <div class="flex flex-col sm:flex-row gap-4 w-full">
+        <a
+          class="group flex items-center justify-center gap-3 bg-primary-dark text-white md:text-xl font-semibold border-4 border-black/50 hover:bg-primary-main hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 ease-out py-3 px-6 rounded-2xl shadow-[6px_6px_0px_rgba(0,0,0,0.35)] hover:shadow-[10px_10px_0px_rgba(0,0,0,0.25)]"
+          href="/pdf/Vitae-Francisco-Madrid-EN.pdf"
+          download
+        >
+          <span>Download CV (EN)</span>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 group-hover:translate-y-[2px] transition-transform duration-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 3v12m0 0 4-4m-4 4-4-4m-5 8h18"
+            />
+          </svg>
+        </a>
+
+        <a
+          class="group flex items-center justify-center gap-3 bg-secondary-main text-white md:text-xl font-semibold border-4 border-black/50 hover:bg-secondary-main/80 hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 ease-out py-3 px-6 rounded-2xl shadow-[6px_6px_0px_rgba(0,0,0,0.35)] hover:shadow-[10px_10px_0px_rgba(0,0,0,0.25)]"
+          href="/pdf/Vitae-Francisco-Madrid-ES.pdf"
+          download
+        >
+          <span>Descargar CV (ES)</span>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 group-hover:translate-y-[2px] transition-transform duration-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 3v12m0 0 4-4m-4 4-4-4m-5 8h18"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <!-- Upper Text -->
+    <div class="absolute top-0 left-0">
+      <div class="grid grid-cols-2 font-bold p-5">
+        <div class="flex flex-col items-start gap-1">
+          <StaggerFadeText
+            delay={.3}
+            client:load
+            text="Want"
+            className="[text-shadow:2px_2px_0px_rgba(0,0,0,.3)] text-3xl md:text-4xl lg:text-5xl text-secondary-main"
+          />
+          <StaggerFadeText
+            delay={.5}
+            client:load
+            className="[text-shadow:2px_2px_0px_rgba(0,0,0,.3)] text-3xl md:text-4xl lg:text-5xl text-secondary-main"
+            text="work with"
+          />
+        </div>
+        <div class="flex items-center justify-center">
+          <FadeInWrapper
+            delay={0.6}
+            client:load>
+            <p class="text-5xl md:text-6xl lg:text-7xl [text-shadow:4px_4px_0px_rgba(0,0,0,.3)] text-secondary-darker"
+              >ME?
+            </p>
+          </FadeInWrapper>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom Text -->
+    <div class="absolute bottom-0 right-0">
+      <div class="flex flex-col gap-1 font-bold p-5 justify-end items-end">
+        <div class="flex items-end justify-end">
+          <StaggerFadeText
+            className="[text-shadow:2px_2px_0px_rgba(0,0,0,.3)] text-3xl md:text-4xl lg:text-5xl text-primary-main"
+            text="You reached"
+            client:load
+          />
+        </div>
+        <div class="flex flex-row gap-1 items-center justify-start">
+          <StaggerFadeText
+            className="[text-shadow:2px_2px_0px_rgba(0,0,0,.3)] text-3xl md:text-4xl lg:text-5xl text-primary-main"
+            text="the"
+            client:load
+          />
+          <FadeInWrapper 
+            client:load 
+            delay={.6}>
+            <p class="text-5xl md:text-6xl lg:text-7xl [text-shadow:4px_4px_0px_rgba(0,0,0,.3)] text-primary-darker">
+              END
+            </p>
+          </FadeInWrapper>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

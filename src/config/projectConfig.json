@@ -1,0 +1,76 @@
+[
+  {
+    "title": "Power Chicken",
+    "site": "https://powerchicken.hn/",
+    "github": "",
+    "tags": [
+      {"category": "Typescrypt"},
+      {"category": "Motion"},
+      {"category": "Astro"},
+      {"category": "React"},
+      {"category": "Node JS"},
+      {"category": "Graphql"},
+      {"category": "Spotify"}
+    ],
+    "content": "Contributed to the migration of the website to the Astro framework, improving overall performance and maintainability. Developed custom scripts and integrations with the Shopify API to support dynamic storefront functionality, and built an interactive location-based map system that allows users to select their area and automatically be assigned to the appropriate restaurant for ordering and delivery services.",
+    "images": [
+      {"img": "/images/projects/power chicken/power chicken 1.jpeg"},
+      {"img": "/images/projects/power chicken/power chicken 2.jpg"},
+      {"img": "/images/projects/power chicken/power chicken 3.jpg"}
+    ]
+  },
+  {
+    "title": "Weather Forecast",
+    "site": "https://weather-site-alpha-nine.vercel.app/",
+    "github": "https://github.com/FranciscoMadrid/weather-site",
+    "tags": [
+      {"category": "Typescrypt"},
+      {"category": "Motion"},
+      {"category": "Astro"},
+      {"category": "React"},
+      {"category": "Node JS"},
+      {"category": "Express JS"}
+    ],
+    "content": "A personal project focused on building a dynamic weather forecasting application powered by a Weather API for real-time data retrieval. The platform features adaptive styling and interactive UI behavior that changes based on the current weather conditions of the searched location, creating a more immersive and responsive user experience.",
+    "images": [
+      {"img": "/images/projects/weather forecast/weather forecast 1.png"},
+      {"img": "/images/projects/weather forecast/weather forecast 2.png"}
+    ]
+  },
+  {
+    "title": "Electronic Swing",
+    "site": "https://electronic-swing.ffmsdev.com/",
+    "github": "https://github.com/FranciscoMadrid/electroswing-site",
+    "tags": [
+      {"category": "Typescrypt"},
+      {"category": "Motion"},
+      {"category": "Astro"},
+      {"category": "React"}
+    ],
+    "content": "A personal project inspired by my passion for music, focused on crafting an immersive and visually engaging experience. I used this project to sharpen my skills in custom animations, responsive design, and interactive UI development, aiming to create a captivating interface that feels dynamic across all devices.",
+    "images": [
+      {"img": "/images/projects/electronic swing/electro swing 1.png"},
+      {"img": "/images/projects/electronic swing/electro swing 2.png"},
+      {"img": "/images/projects/electronic swing/electro swing 3.png"},
+      {"img": "/images/projects/electronic swing/electro swing 4.png"}
+    ]
+  },
+  {
+    "title": "E-Library Site",
+    "site": "https://e-library.ffmsdev.com/",
+    "github": "https://github.com/FranciscoMadrid/e-library-site",
+    "tags": [
+      {"category": "Motion"},
+      {"category": "Tailwindcss"},
+      {"category": "React"},
+      {"category": "Node JS"},
+      {"category": "Express JS"}
+    ],
+    "content": "A full-stack E-Library platform built entirely from the ground up, from database architecture to the final user interface. Developed using RESTful API principles, with a strong focus on security through encrypted user data and protected authentication flows. The platform features a dynamic search system, responsive design, and an intuitive user experience optimized across devices.",
+    "images": [
+      {"img": "/images/projects/e commerce/e commerce 1.png"},
+      {"img": "/images/projects/e commerce/e commerce 2.png"},
+      {"img": "/images/projects/e commerce/e commerce 3.png"}
+    ]
+  }
+]
